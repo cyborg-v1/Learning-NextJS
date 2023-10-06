@@ -1,14 +1,15 @@
 import PostCard from "@/components/PostCard";
+import loadPost from "@/functions/loadposts";
+import Link from "next/link";
 
-async function loadPost() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const data = await res.json();
-  return data;
+export function GetLink(params){
+  return <Link href={`/posts/${params.id}`}>
+  {params.children}
+  </Link>
 }
 
 async function PostPage() {
   const posts = await loadPost();
-  console.log(posts);
   return <div>
     {
       posts.map((post)=>{
