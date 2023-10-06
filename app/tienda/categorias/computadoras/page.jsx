@@ -1,3 +1,6 @@
+export const metadata = {
+  title:"Pagina de computadoras"
+}
 
 function Computadoras() {
   return (
