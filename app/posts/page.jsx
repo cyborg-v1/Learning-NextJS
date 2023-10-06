@@ -1,6 +1,9 @@
 import PostCard from "@/components/PostCard";
 import loadPost from "@/functions/loadposts";
 import Link from "next/link";
+import retraso from "@/functions/retraso";
+
+
 
 export function GetLink(params){
   return <Link href={`/posts/${params.id}`}>
@@ -9,6 +12,8 @@ export function GetLink(params){
 }
 
 async function PostPage() {
+  await retraso();
+
   const posts = await loadPost();
   return <div>
     {
