@@ -15,7 +15,7 @@ async function PostPage() {
   await retraso();
 
   const posts = await loadPost();
-  return <div>
+  return <div className="bg-gray-900 grid grid-cols-3 auto-rows-max">
     {
       posts.map((post)=>{
         return <PostCard post={post} key={post.id}/>

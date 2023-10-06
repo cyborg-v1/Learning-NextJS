@@ -1,0 +1,6 @@
+.navbar {
+  padding: 20px;
+  background: #151515;
+  display: flex;
+  gap: 1rem;
+}

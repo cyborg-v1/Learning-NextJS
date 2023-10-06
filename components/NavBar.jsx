@@ -1,10 +1,11 @@
 import Link from "next/link";
+import './NavBar.css'
 
 function NavBar() {
   return (
-    <div>
-      <h1>NextJS app</h1>
-      <ul>
+    <div className="text-3xl font-bold text-white flex">
+      <h1 className="navbar text-slña">NextJS app</h1>
+      <ul className="text-base text-slate-800 flex gap-4 justify-center content-center m-auto">
         <li>
           <Link href={"/"}>Inicio</Link>
         </li>
